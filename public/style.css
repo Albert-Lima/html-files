@@ -382,7 +382,7 @@
     }
     .main-desc-by-section{
         font-family: var(--var-fontPrimary);
-        font-size: 20pt;
+        font-size: 15pt;
         font-weight: 600;
         color: black;
     }
@@ -392,5 +392,26 @@
         color: black;
         font-weight: 400;
         max-width: 500px;
+    }
+}
+@media (max-width: 570px) {
+    .name-section{
+        font-family: var(--var-fontPrimary);
+        color: var(--var-mainColor);
+        font-size: 10pt;
+        font-weight: 500;
+    }
+    .main-desc-by-section{
+        font-family: var(--var-fontPrimary);
+        font-size: 15pt;
+        font-weight: 600;
+        color: black;
+    }
+    .main-text-by-section{
+        font-family: var(--var-fontSecundary);
+        font-size: 10pt;
+        color: black;
+        font-weight: 400;
+        max-width: 90%;
     }
 }
