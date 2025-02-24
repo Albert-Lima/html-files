@@ -31,3 +31,117 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.596);
 }
+
+
+#containerBoxServices{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    height: max-content;
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+#containerBoxServices a{
+    height: 400px;
+    width: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+}
+#containerBoxServices a span{
+    font-family: var(--var-fontPrimary);
+    font-size: 25pt;
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    padding-top: 50px;
+    text-align: left;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+#containerBoxServices a img{
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+}
+#containerBoxServices{
+    animation: surgeUp 2s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
+}
+#containerBoxServices a:nth-child(2){
+    animation: slideDown 2s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 42%;
+    margin-top: 30px;
+}
+@keyframes surgeUp {
+    0%{
+        opacity: 0.5;
+        transform: translateY(200px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes slideDown {
+    0%{
+        margin-top: 0px;
+    }
+    100%{
+        margin-top: 30px;
+    }
+}
+
+#containerBoxServices a:hover{
+    background-color: #dc3b26;
+}
+
+#containerBoxServices a:hover img{
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+@media (max-width: 1300px) {
+    #containerBoxServices a{
+        height: 300px;
+        width: 200px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: black;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+        position: relative;
+    }
+
+    #containerBoxServices a span{
+        font-size: 15pt;
+        padding-top: 40px;
+    }
+    #containerBoxServices a img{
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+    }
+}

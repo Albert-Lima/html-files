@@ -104,6 +104,9 @@
 .container-flag-lang p:hover{
     color: var(--var-headerFontColorHover);
 }
+.icon-open-lang{
+    cursor: pointer;
+}
 
 .actived-lang{
     display: flex;
@@ -369,4 +372,25 @@
     color: black;
     font-weight: 400;
     max-width: 500px;
+}
+@media (max-width: 1100px) {
+    .name-section{
+        font-family: var(--var-fontPrimary);
+        color: var(--var-mainColor);
+        font-size: 11pt;
+        font-weight: 500;
+    }
+    .main-desc-by-section{
+        font-family: var(--var-fontPrimary);
+        font-size: 20pt;
+        font-weight: 600;
+        color: black;
+    }
+    .main-text-by-section{
+        font-family: var(--var-fontSecundary);
+        font-size: 11pt;
+        color: black;
+        font-weight: 400;
+        max-width: 500px;
+    }
 }
