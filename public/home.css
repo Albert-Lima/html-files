@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --var-headerFontColor: #757575;
+    --var-headerFontColorHover: #f45d48;
+    --var-fontSecundary: "Open Sans", serif;
+    --var-fontPrimary: "Montserrat", serif;
+}
+
+
+.section-top-home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img/image 1.png");
+    filter: brightness(0.7)
+}

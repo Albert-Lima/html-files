@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --var-headerFontColor: #757575;
+    --var-headerFontColorHover: #f45d48;
+    --var-fontSecundary: "Open Sans", serif;
+    --var-fontPrimary: "Montserrat", serif;
+}
+
+.header-main-page{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: calc(100% - 30px - 30px);
+    background-color: white;
+    padding: 10px 15px;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    border-radius: 40px;
+    z-index: 10;
+}
+
+.header-main-page a img{
+    height: 60px;
+}
+
+.header-main-page nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-main-page nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+.header-main-page nav ul li a{
+    text-decoration: none;
+    color: var(--var-headerFontColor);
+    font-family: var(--var-fontSecundary);
+    font-size: 11pt;
+    font-weight: 500;
+}
+.header-main-page nav ul li a:hover{
+    color: var(--var-headerFontColorHover);
+}
+
+.container-select-lang{
+    position: absolute;
+    right: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.btt-lang{
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.container-flag-lang{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.container-flag-lang p{
+    font-family: var(--var-fontPrimary);
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--var-headerFontColor);
+}
+
+.actived-lang{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
