@@ -243,9 +243,23 @@
     height: 50vh;
     width: calc(90% - 200px);
     max-width: 1000px;
-    margin-top: calc(100vh - 75vh);
-    margin-bottom: calc(100vh - 75vh);
+    margin-top: calc(100vh - 80vh);
+    margin-bottom: calc(100vh - 80vh);
     gap: 30px;
+    animation: surgeContainer 10s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
+}
+
+@keyframes surgeContainer {
+    from{
+        opacity: 0.3;
+        scale: 0.8;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
 .container-model-one h2{
     font-family: var(--var-fontPrimary);
@@ -326,4 +340,33 @@
     .container-model-one a{
         font-size: 10pt;
     }
+}
+
+
+.container-model-two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+.name-section{
+    font-family: var(--var-fontPrimary);
+    color: var(--var-mainColor);
+    font-size: 12pt;
+    font-weight: 500;
+}
+.main-desc-by-section{
+    font-family: var(--var-fontPrimary);
+    font-size: 25pt;
+    font-weight: 600;
+    color: black;
+}
+.main-text-by-section{
+    font-family: var(--var-fontSecundary);
+    font-size: 15pt;
+    color: black;
+    font-weight: 400;
+    max-width: 500px;
 }
