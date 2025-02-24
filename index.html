@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <link rel="stylesheet" href="public/style.css">
+    <title data-lang="title-page">Tropical Tech - Página Inicial</title>
 </head>
 <body>
-    Olá
+    <!--header é universal-->
+    <header class="header-main-page">
+        <a href="/">
+            <img src="public/img/Tropical tech logo completo final sem bg 1.png" alt="logo torpical tech">
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/about" data-lang="linkAbout">
+                        Sobre
+                    </a>
+                </li>
+                <li>
+                    <a href="/services" data-lang="linkCervices">
+                        Serviços
+                    </a>
+                </li>
+                <li>
+                    <a href="/culture" data-lang="linkCulture">
+                        Cultura
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact" data-lang="linkContact">
+                        Contato
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container-select-lang">
+            <button class="btt-lang">
+                <span id="buttonSelectLangPT" class="actived-lang container-flag-lang">
+                    <img src="public/img/52538-flag-of-portugal-clipart 1.png" alt="portugal flag">
+                    PT
+                </span>
+                <span id="buttonSelectLangUS" class="container-flag-lang">
+                    <img src="public/img/icons8-eua-48.png" alt="united states flag">
+                    US
+                </span>
+            </button>
+        </div>
+    </header>
+
+
+    <!--os estilos se encontram em home.css-->
+    <!--background: public/img/image 1.png-->
+    <section class="section-top-home">
+        <div class="desc-section-home">
+            <h1 data-lang="titleSectionTopHome">Inovar é a essência <br> da humanidade.</h1>
+            <p data-lang="descSectionTopHome">Transformar a Consultoria em TI com os melhores <br> talentos humanos é nosso diferêncial.</p>
+        </div>
+    </section>
+
+    <!--estilização universal-->
+    <section class="clear-section">
+        <section class="container-model-one">
+            <h2>Nosso sorriso é o nosso melhor cumprimento</h2>
+            <p>O bem-estar das nossas pessoas é a nossa prioridade genuína.</p>
+            <a href="/about" data-lang="linkKnowMoreHome">
+                saiba mais &rarr;
+            </a>
+        </section>
+    </section>
+
+
+    <!--script principal-->
+    <script src="public/script.js"></script>
+    <!--seleciona a linguagem-->
+    <script src="publiclang.js"></script>
 </body>
 </html>
