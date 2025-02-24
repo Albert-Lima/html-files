@@ -130,7 +130,7 @@
 .menu-hamburger{
     display: none;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     padding: 0px 30px;
     height: 80vh;
@@ -159,5 +159,30 @@
     }
     .menu-hamburger{
         display: flex;
+    }
+
+    .header-main-page nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header-main-page nav ul{
+        flex-direction: column;
+    }
+    .header-main-page nav ul li:hover{
+        transform: translateX(20px);
+    }
+    
+    .container-select-lang{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
     }
 }

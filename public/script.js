@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const openHamburger = document.querySelector(".open-hamburger"); // Ícone de "fechar" o menu
 
     // Inicialmente o menu está fechado
-    menuHamburger.style.right = "-100%"; // Menu fora da tela
+    menuHamburger.style.right = "-120%"; // Menu fora da tela
 
     bttHamburger.addEventListener("click", () => {
         // Alterna a posição do menu
