@@ -373,7 +373,7 @@
     font-weight: 400;
     max-width: 500px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
     .name-section{
         font-family: var(--var-fontPrimary);
         color: var(--var-mainColor);

@@ -135,6 +135,48 @@
         position: relative;
     }
 
+    #containerBoxServices{
+        margin-top: 30px;
+    }
+    #containerBoxServices a span{
+        font-size: 15pt;
+        padding-top: 40px;
+    }
+    #containerBoxServices a img{
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+    }
+    #containerBoxServices{
+        animation: surgeUp 2s ease-in-out;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+    #containerBoxServices a:nth-child(2){
+        animation: slideDown 2s ease-in-out;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 1000px) {
+    
+    #containerBoxServices a{
+        height: 300px;
+        width: 200px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: black;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+        position: relative;
+    }
+
     #containerBoxServices a span{
         font-size: 15pt;
         padding-top: 40px;
