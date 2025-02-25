@@ -116,3 +116,114 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+// Função para animar a contagem até o número final
+// Função para animar a contagem até o número final
+function animateNumber(element, finalNumber) {
+    let currentNumber = 0;
+    const increment = finalNumber / 100; // Incrementa de forma suave
+    const interval = setInterval(() => {
+        currentNumber += increment;
+        element.innerText = `+${Math.round(currentNumber)}`;
+        if (currentNumber >= finalNumber) {
+            clearInterval(interval);
+            element.innerText = `+${finalNumber}`; // Garantir que chegue ao número final
+        }
+    }, 60); // Ajuste para mais rápido ou lento
+}
+
+// Função de callback para o Intersection Observer
+const callback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const element = entry.target;
+            let finalNumber = 0;
+
+            if (element.id === 'aubilousNumbers') {
+                finalNumber = 364; // Número para o aubilousNumbers
+            } else if (element.id === 'clientNumbers') {
+                finalNumber = 38; // Número para o clientNumbers
+            }
+
+            animateNumber(element, finalNumber);
+            observer.unobserve(element); // Para de observar após a animação
+        }
+    });
+};
+
+// Criar o Intersection Observer
+const observer = new IntersectionObserver(callback, {
+    threshold: 0.5 // A animação começa quando 50% do elemento estiver visível
+});
+
+// Começar a observar os elementos com ids específicos
+const aubilousNumbersElement = document.getElementById('aubilousNumbers');
+const clientNumbersElement = document.getElementById('clientNumbers');
+
+observer.observe(aubilousNumbersElement);
+observer.observe(clientNumbersElement);
+
+
+
+
+
+
+
+
+/*slide home*/
+const images = document.querySelectorAll('.container-image');
+let currentIndex = 1; // Começa na segunda imagem (meio do primeiro trio)
+
+function updateSlider() {
+    images.forEach((image) => {
+        image.classList.remove('active', 'side', 'left', 'right', 'center');
+        image.style.opacity = "0";
+    });
+
+    // Aplicar classes para transição suave
+    if (images[currentIndex - 1]) {
+        images[currentIndex - 1].classList.add('side', 'left'); // Esquerda
+        images[currentIndex - 1].style.opacity = "0.6";
+    }
+
+    images[currentIndex].classList.add('active', 'center'); // Centro (destacada)
+    images[currentIndex].style.opacity = "1";
+
+    if (images[currentIndex + 1]) {
+        images[currentIndex + 1].classList.add('side', 'right'); // Direita
+        images[currentIndex + 1].style.opacity = "0.6";
+    }
+}
+
+function nextSlide() {
+    if (currentIndex < images.length - 2) {
+        currentIndex++;
+    } else {
+        currentIndex = 1; // Volta para o começo
+    }
+    updateSlider();
+}
+
+document.getElementById('back-slide').addEventListener('click', () => {
+    if (currentIndex > 1) {
+        currentIndex--;
+    } else {
+        currentIndex = images.length - 2; // Volta para o final
+    }
+    updateSlider();
+});
+
+document.getElementById('next-slide').addEventListener('click', nextSlide);
+
+// Permitir que a imagem do meio avance o slide ao ser clicada
+images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+        if (index === currentIndex) {
+            nextSlide();
+        }
+    });
+});
+
+// Inicializa o slider
+updateSlider();

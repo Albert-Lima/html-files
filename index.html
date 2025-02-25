@@ -98,7 +98,7 @@
         <!--estilo único-->
         <section id="containerBoxServices">
             <a href="/outsoursing.html">
-                <span>Outsoursing</span>
+                <span>Outsourcing</span>
                 <img src="public/img/Component 1.png" alt="Outsoursing image">
             </a>
             <a href="www.tropical-tech.com">
@@ -120,20 +120,22 @@
 
         <!--estilização única-->
         <section id="gridBoxesNumberHome">
-            <div>
-                <span><img src="public/img/ComponentNumbers.png" alt="icon"></span>
-                <span>
-                    <p class="numberSectionStyleHome">+364</p>
-                    <p class="descNumberSectionHome">Aubilous</p>
-                </span>
-            </div>
-            <div>
-                <span><img src="public/img/numbers-clients.svg.png" alt="icon"></span>
-                <span>
-                    <p class="numberSectionStyleHome">+38</p>
-                    <p class="descNumberSectionHome">Clientes</p>
-                </span>
-            </div>
+            <section>
+                <div class="boxNumberHome">
+                    <span><img src="public/img/ComponentNumbers.png" alt="icon"></span>
+                    <span>
+                        <p class="numberSectionStyleHome" id="aubilousNumbers">+364</p>
+                        <p class="descNumberSectionHome">Aubilous</p>
+                    </span>
+                </div>
+                <div class="boxNumberHome">
+                    <span><img src="public/img/numbers-clients.svg.png" alt="icon"></span>
+                    <span>
+                        <p class="numberSectionStyleHome" id="clientNumbers">+38</p>
+                        <p class="descNumberSectionHome">Clientes</p>
+                    </span>
+                </div>
+            </section>
             <div>
                 <span>2024</span>
                 <span>
@@ -149,41 +151,66 @@
         <!--estilo universal-->
         <section class="container-model-two">
             <h2 class="name-section" data-lang="nameSectionCultureHome">CULTURA</h2>
-            <h3 class="main-desc-by-section .clear" data-lang="mainDescCultureHome">Cultura Tropical</h3><!--textos que contém clear mudarão para design branco-->
-            <p class="main-text-by-section .clear" data-lang="mainTextCultureHome">
-                A nossa Cultura está assente em pilares como a proximidade, o <br>
-                bem-estar, o trabalho em equipa, o feedback constante e a <br>
+            <h3 class="main-desc-by-section .clearFont" data-lang="mainDescCultureHome" style="color: white;">Cultura Tropical</h3><!--textos que contém clear mudarão para design branco-->
+            <p class="main-text-by-section .clearFont" data-lang="mainTextCultureHome" style="color: rgb(215, 215, 215);">
+                A nossa Cultura está assente em pilares como a proximidade, o
+                bem-estar, o trabalho em equipa, o feedback constante e a
                 aprendizagem contínua.
             </p>
         </section>
 
         <section class="slide">
             <div class="container-image">
-                <img src="" alt="">
+                <img src="public/img/slideHome/pexels-bertellifotografia-16118489.png" alt="">
             </div>
             <div class="container-image">
-                <img src="" alt="">
+                <img src="public/img/slideHome/imgSlideMain.png" alt="">
             </div>
             <div class="container-image">
-                <img src="" alt="">
+                <img src="public/img/slideHome/pexels-fauxels-3184427.png" alt="">
+            </div>
+            <div class="container-image">
+                <img src="public/img/slideHome/pexels-felicity-tai-7964481.png" alt="">
+            </div>
+            <div class="container-image">
+                <img src="public/img/slideHome/pexels-gerzonpinatamx-9511917.png" alt="">
+            </div>
+            <div class="container-image">
+                <img src="public/img/slideHome/pexels-jopwell-2422293.png" alt="">
+            </div>
+            <div class="container-image">
+                <img src="public/img/slideHome/pexels-kampus-8171189.png" alt="">
+            </div>
+            <div class="container-image">
+                <img src="public/img/slideHome/pexels-mart-production-7550397.png" alt="">
+            </div>
+            <div class="container-image">
+                <img src="public/img/slideHome/pexels-mizunokozuki-12898979.png" alt="">
             </div>
         </section>
+        <section class="control-slide">
+            <button id="back-slide">
+                <img src="public/img/icons8-direita-48 (1).png" alt="back-slide">
+            </button>
+            <button id="next-slide">
+                <img src="public/img/icons8-direita-48 (2).png" alt="next-slide">
+            </button>
+        </section>
 
-        <a href="/culture" data-lang="linkCultureHome">
+        <a href="/culture" data-lang="linkCultureHome" style="margin-top: 30px;">
             Cultura &rarr;
         </a>
     </section>
 
     <!--style universal-->
-    <section class="clear-section">
-        <section class="container-model-two">
+    <section class="clear-section clear-section-home" >
+        <section class="container-model-two" style="margin-top: 50px;">
             <h2 class="name-section" data-lang="nameSectionNovidadesHome">Novidades</h2>
             <h3 class="main-desc-by-section" data-lang="mainDescServicesHome">Fique por dentro do mundo Tech</h3>
             <p class="main-text-by-section" data-lang="mainTextServicesHome">As últimas novidades sobre nossa empresa.</p>
         </section>
 
         <section class="container-all-content-cultureHome">
-            <section class="container-horizontal-boxes-align">
                 <div class="box-novidades">
                     <p>
                         Tropical Tech já tem
@@ -211,32 +238,35 @@
                         <img src="public/img/DSC_0023_a9be20b78e.jpg.png" alt="img webnaries">
                     </div>
                 </div>
-            </section>
         </section>
     </section>
 
-    <!--style unic-->
-    <section>
-        <div>
-            <p>
-                Não perca mais
-                tempo, vamos
-                conversar!
-            </p>
-        </div>
-        <div>
-            <a href="">
-                Aceita <br> um chá?
-                <span>
-                    <img src="public/img/Container.png" alt="aceita um chá?">
-                </span>
-            </a>
-        </div>
-    </section>
+    
 
     <!--footer universal-->
     <footer class="footer-main-page">
-        <section>
+        <!--style universal-->
+        <section class="section-want-tea">
+            <div>
+                <p>
+                    Não perca mais
+                    tempo, vamos
+                    conversar!
+                </p>
+            </div>
+            <a href="">
+                <p>
+                    Aceita <br> um chá?
+                </p>
+                <div>
+                    <img src="public/img/Container.png" alt="aceita um chá?">
+                </div>
+            </a>
+        </section>
+
+
+
+        <section class="container-items-footer">
             <section>
                 <div>
                     <h2 class="title-footer-links-main">Tropical Tech</h2>
@@ -250,27 +280,27 @@
                 </div>
             </section>
             <section>
-                <div>
-                    <div>
-                        <a href="#">
+                <div class="container-links-social">
+                    <div class="box-link-social">
+                        <a href="#" class="link-social">
                             <img src="public/img/iconInstagram.png" alt="instagram">
                         </a>
                     </div>
-                    <div>
-                        <a href="#">
+                    <div class="box-link-social">
+                        <a href="#" class="link-social">
                             <img src="public/img/iconFacebook.png" alt="facebook">
                         </a>
                     </div>
-                    <div>
-                        <a href="#">
+                    <div class="box-link-social">
+                        <a href="#" class="link-social">
                             <img src="public/img/iconLinkedin.png" alt="linkedin">
                         </a>
                     </div>
                 </div>
-                <div>
-                    <span>
+                <div class="copy-content">
+                    <div>
                         Copyright © 2024 - Tropical Tech | All Rights <br> Reserved
-                    </span>
+                    </div>
                 </div>
             </section>
         </section>

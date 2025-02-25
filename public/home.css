@@ -7,6 +7,7 @@
 :root{
     --var-headerFontColor: #757575;
     --var-headerFontColorHover: #f45d48;
+    --var-backgroundSecundary: #078080;
     --var-fontSecundary: "Open Sans", serif;
     --var-fontPrimary: "Montserrat", serif;
 }
@@ -22,6 +23,9 @@
     background-image: url("img/image 1.png");
     background-size: cover;
     background-position: left center;
+    animation: borderTop 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 50% cover 150%;
 }
 .overlayer{
     position: absolute;
@@ -30,8 +34,18 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.596);
+    animation: borderTop 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 50% cover 150%;
 }
-
+@keyframes borderSection {
+    from{
+        border-bottom: 0%;
+    }
+    to{
+        border-bottom: 20%
+    }
+}
 
 #containerBoxServices{
     display: flex;
@@ -241,5 +255,295 @@
         position: absolute;
         bottom: -30px;
         width: 100%;
+    }
+}
+
+
+#gridBoxesNumberHome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    width: 90%;
+    max-width: 1400px;
+}
+#gridBoxesNumberHome section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: max-content;
+    height: max-content;
+}
+
+#gridBoxesNumberHome section div{
+    height: 400px;
+    width: 205px;
+    padding: 30px;
+    position: relative;
+    border-radius: 20px;
+}
+#gridBoxesNumberHome section div:nth-child(1) span:nth-child(1) img{
+    width: 70%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px;
+}
+#gridBoxesNumberHome section div:nth-child(2) span:nth-child(1) img{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#gridBoxesNumberHome section div:nth-child(1){
+    background-color: var(--var-backgroundSecundary);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+#gridBoxesNumberHome section div:nth-child(2){
+    
+}
+
+
+#gridBoxesNumberHome > div:nth-child(2){
+    height: 400px;
+    width: 410px;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+#gridBoxesNumberHome > div:nth-child(2) span:nth-child(1){
+    font-family: var(--var-fontSecundary);
+    color: white;
+    font-size: 10pt;
+    background-color: var(--var-headerFontColorHover);
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.numberSectionStyleHome{
+    font-family: var(--var-fontPrimary);
+    font-size: 35pt;
+    font-weight: 600;
+}
+.descNumberSectionHome{
+    font-family: var(--var-fontSecundary);
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+#gridBoxesNumberHome section div:nth-child(1) .numberSectionStyleHome, #gridBoxesNumberHome section div:nth-child(1) .descNumberSectionHome{
+    color: white;
+}
+#gridBoxesNumberHome section div:nth-child(2) .numberSectionStyleHome{
+    color: var(--var-headerFontColorHover);
+}
+#gridBoxesNumberHome section div:nth-child(2) .descNumberSectionHome{
+    color: var(--var-headerFontColor);
+}
+
+
+#gridBoxesNumberHome > div:nth-child(2) span:nth-child(2) p:nth-child(1){
+    color: var(--var-headerFontColorHover);
+}
+#gridBoxesNumberHome > div:nth-child(2) span:nth-child(2) p:nth-child(2){
+    color:var(--var-headerFontColor);
+    font-family: var(--var-fontSecundary);
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+
+
+@media (max-width: 1200px) {
+    #gridBoxesNumberHome{
+        margin-top: 30px;
+    }
+    #gridBoxesNumberHome section div{
+        height: 300px;
+        width: 150px;
+        padding: 20px;
+    }
+    #gridBoxesNumberHome > div:nth-child(2){
+        height: 300px;
+        width: 300px;
+        padding: 20px;
+    }
+}
+@media (max-width: 800px) {
+    #gridBoxesNumberHome{
+        flex-direction: column;
+    }
+    
+    #gridBoxesNumberHome section div{
+        height: 300px;
+        width: 200px;
+        padding: 20px;
+        position: relative;
+        border-radius: 20px;
+    }
+    #gridBoxesNumberHome > div:nth-child(2){
+        height: 200px;
+        width: 480px;
+        padding: 20px;
+    }
+}
+@media (max-width: 600px) {
+    #gridBoxesNumberHome section div{
+        height: 200px;
+        width: 100px;
+        padding: 10px;
+    }
+    #gridBoxesNumberHome > div:nth-child(2){
+        height: 130px;
+        width: 240px;
+        padding: 10px;
+    }
+    .numberSectionStyleHome{
+        font-size: 20pt;
+    }
+    .descNumberSectionHome{
+        font-size: 11pt;
+    }
+    #gridBoxesNumberHome > div:nth-child(2) span:nth-child(2) p:nth-child(2){
+        font-size: 11pt;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 500px;
+    max-width: 500px;
+    position: relative;
+}
+
+.container-image {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    position: absolute;
+}
+
+.container-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.side {
+    opacity: 0.6;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.left {
+    left: 10%;
+}
+
+.center {
+    left: 50%;
+    transform: translateX(-50%) scale(1.2);
+}
+
+.right {
+    right: 10%;
+}
+
+.control-slide {
+    margin-top: 0px;
+}
+
+.control-slide button {
+    padding: 10px 10px;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 2px;
+    margin-top: 0px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+.control-slide button:hover{
+    scale: 1.05
+}
+.control-slide button img{
+    width: 100%;
+    height: auto;
+}
+
+.section-green-styled a{
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid white;
+    font-family: var(--var-fontPrimary);
+    font-size: 11pt;
+    font-weight: 500;
+    color: var(--var-mainColor);
+    border-radius: 20px;
+}
+.section-green-styled a:hover{
+    color: white;
+    background-color: transparent;
+}
+
+@media (max-width: 490px) {
+    .slide {
+        width: 100%;
+        height: 350px;
+        max-width: 300px;
+    }
+    
+    .container-image {
+        width: 200px;
+        height: 200px;
+    }
+    .control-slide {
+        display: none;
     }
 }
