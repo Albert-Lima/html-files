@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/oursourcing.css">
+    <link rel="stylesheet" href="public/services.css">
     <title data-lang="title-page">Tropical Tech - Serviços</title>
 </head>
 <body>
@@ -37,21 +40,30 @@
         </nav>
 
         <div class="container-select-lang">
-            <button class="btt-lang">
-                <span id="buttonSelectLangPT" class="actived-lang container-flag-lang">
+            <div class="btt-lang">
+                <button id="buttonSelectLangPT" class="actived-lang container-flag-lang">
                     <img src="public/img/52538-flag-of-portugal-clipart 1.png" alt="portugal flag">
-                    PT
+                    <p>PT</p>
+                    
                 </span>
-                <span id="buttonSelectLangUS" class="container-flag-lang">
+                <button id="buttonSelectLangUS" class="container-flag-lang">
                     <img src="public/img/icons8-eua-48.png" alt="united states flag">
-                    US
-                </span>
-            </button>
+                    <p>US</p>
+                </button>
+            </div>
+            <img src="public/img/openLang.png" alt="icon open lang" class="icon-open-lang">
         </div>
+
+
+        <button class="btt-hamburger">
+            <img src="public/img/icons8-cardápio-48.png" alt="closed hamburger" class="closed-hamburger">
+            <img src="public/img/icons8-excluir-64.png" alt="open hamburger" class="open-hamburger"><!--inicialmente display: none;-->
+        </button>
+        <section class="menu-hamburger"></section>
     </header>
 
     <!--estilo universal-->
-    <section class="section-top-main">
+    <section class="section-top-main" style="position: relative;">
         <div class="desc-section-home">
             <h1 data-lang="titleSectionTop">Serviços</h1>
             <p data-lang="descSectionTop">
@@ -63,89 +75,89 @@
         </div>
         <!--estilizado em services.css-->
         <span class="deisgnSpanOneServices">
-            <img src="" alt="design span">
+            <img src="public/img/designSpanServicesOne.png" alt="design span">
         </span>
     </section>
 
 
+    <!--estilizado em services.css-->
+    <div class="designSpanTwoServices"></div>
 
     <!--estilado universalmente-->
-    <section class="clear-section">
-        <!--estilizado em services.css-->
-        <span class="designSpanTwoServices"></span>
+    <section class="clear-section clear-section-services" style="margin-top: 120px;">
 
+        <section class="container-boxes-pageService">
+            <!--estilizado em oursourcing.css-->
+            <div id="circlePageService">
+                <img src="public/img/circleService.png" alt="img">
+            </div>
 
+            <!--estilização universal-->
+            <div class="container-text-service">
+                <h2 class="section-service-page">Outsoursing</h2>
+                <p>
+                    Investimos a nossa energia e criatividade para impulsionar o sucesso do
+                    seu negócio. Os nossos serviços permitem externalizar as necessidades
+                    de IT dos nossos clientes e otimizar a gestão dos recursos humanos e
+                    técnicos associados.
+                </p>
 
-        <section class="centralize-section-pageService">
-            <section class="container-boxes-pageService">
                 <!--estilizado em services.css-->
-                <div id="circlePageService"></div>
+                <a href="/outsourcing.html" class="link-to-services">
+                    Saber mais &rarr;
+                </a>
 
-                <!--estilização universal-->
-                <div>
-                    <h2 class="section-service-page">Outsoursing</h2>
-                    <p>
-                        Investimos a nossa energia e criatividade para impulsionar o sucesso do
-                        seu negócio. Os nossos serviços permitem externalizar as necessidades
-                        de IT dos nossos clientes e otimizar a gestão dos recursos humanos e
-                        técnicos associados.
-                    </p>
+            </div>
 
-                    <!--estilizado em services.css-->
-                    <a href="/outsoursing.html" class="link-to-services">
-                        Saber mais &rarr;
-                    </a>
-                </div>
-            </section>
-            <section class="container-boxes-pageService">
-                <!--estilização universal-->
-                <div>
-                    <h2 class="section-service-page">Software</h2>
-                    <p>
-                        Apresentamos soluções à medida das necessidades dos nossos clientes.
-                        Trabalhando em colaboração constante, identificamos a abordagem mais
-                        adequada para resolver os desafios, assegurando uma gestão abrangente
-                        de todas as fases do projeto através de uma interação contínua e
-                        dedicada
-                    </p>
+            <!--estilizado em services.css-->
+            <span class="designSpanThreeServices"></span>
+        </section>
+        <section class="container-boxes-pageService">
+            <!--estilização universal-->
+            <div class="container-text-service">
+                <h2 class="section-service-page">Software</h2>
+                <p>
+                    Apresentamos soluções à medida das necessidades dos nossos clientes.
+                    Trabalhando em colaboração constante, identificamos a abordagem mais
+                    adequada para resolver os desafios, assegurando uma gestão abrangente
+                    de todas as fases do projeto através de uma interação contínua e
+                    dedicada
+                </p>
 
-                    <!--estilizado em services.css-->
-                    <a href="www.tropical-tech.com" class="link-to-services">
-                        Saber mais &rarr;
-                    </a>
+                <!--estilizado em services.css-->
+                <a href="www.tropical-tech.com" class="link-to-services">
+                    Saber mais &rarr;
+                </a>
 
-                    <!--estilizado em services.css-->
-                    <span class="designSpanThreeServices"></span>
-                </div>
+            </div>
 
-                <!--estilizado em Oursoursing.css-->
-                <div id="designOnePageService">
-                    <img src="public/img/solution-projects.svg.png" alt="design span">
-                </div>
-            </section>
-            <section class="container-boxes-pageServiceColumn">
-                <!--estilização universal-->
-                <div>
-                    <h2 class="section-service-page">Nearshore</h2>
-                    <p>
-                        Sabemos que o futuro passa por aqui e desde 2019 apostamos nesta
-                        vertente. Somos totalmente moldáveis à realidade do cliente, desde o
-                        horário do país em que se encontra, à construção de uma equipa
-                        especializada e orientada para o seu projeto. Construímos soluções e
-                        criamos sinergias com os nossos parceiros. Sempre juntos!
-                    </p>
+            <!--estilizado em Oursoursing.css-->
+            <div id="designOnePageService">
+                <img src="public/img/solution-projects.svg.png" alt="design span">
+            </div>
+        </section>
+        <section class="container-boxes-pageServiceColumn">
+            <!--estilização universal-->
+            <div class="container-text-service">
+                <h2 class="section-service-page">Nearshore</h2>
+                <p>
+                    Sabemos que o futuro passa por aqui e desde 2019 apostamos nesta
+                    vertente. Somos totalmente moldáveis à realidade do cliente, desde o
+                    horário do país em que se encontra, à construção de uma equipa
+                    especializada e orientada para o seu projeto. Construímos soluções e
+                    criamos sinergias com os nossos parceiros. Sempre juntos!
+                </p>
 
-                    <!--estilizado em services.css-->
-                    <a href="/nearshore.html" class="link-to-services">
-                        Saber mais &rarr;
-                    </a>
-                </div>
+                <!--estilizado em services.css-->
+                <a href="/nearshore.html" class="link-to-services">
+                    Saber mais &rarr;
+                </a>
+            </div>
 
-                <!--estilizado em Oursoursing.css-->
-                <div id="designTwoPageService">
-                    <img src="public/img/solution-nearshore.svg.png" alt="design span">
-                </div>
-            </section>
+            <!--estilizado em Oursoursing.css-->
+            <div id="designTwoPageService">
+                <img src="public/img/solution-nearshore.svg.png" alt="design span">
+            </div>
         </section>
     </section>
 
@@ -156,33 +168,37 @@
             <p>Seja qual for a solução que seu negócio precisa, estamos aqui</p>
         </div>
         <div>
-            <a href="#">Tenho uma empresa e preciso de fazer uma transformação digital</a>
-            <a href="#">Sou investidor e quero desenvolver um produto digital</a>
-            <a href="#">Preciso reforçar a minha equipa</a>
+            <a href="/contact.html">Tenho uma empresa e preciso de fazer uma transformação digital</a>
+            <a href="/contact.html">Sou investidor e quero desenvolver um produto digital</a>
+            <a href="/contact.html">Preciso reforçar a minha equipa</a>
         </div>
     </section>
-    <!--style unic-->
-    <section>
-        <div>
-            <p>
-                Não perca mais
-                tempo, vamos
-                conversar!
-            </p>
-        </div>
-        <div>
-            <a href="">
-                Aceita <br> um chá?
-                <span>
-                    <img src="public/img/Container.png" alt="aceita um chá?">
-                </span>
-            </a>
-        </div>
-    </section>
+    
 
     <!--footer universal-->
     <footer class="footer-main-page">
-        <section>
+        <!--style universal-->
+        <section class="section-want-tea">
+            <div>
+                <p>
+                    Não perca mais
+                    tempo, vamos
+                    conversar!
+                </p>
+            </div>
+            <a href="">
+                <p>
+                    Aceita <br> um chá?
+                </p>
+                <div>
+                    <img src="public/img/Container.png" alt="aceita um chá?">
+                </div>
+            </a>
+        </section>
+
+
+
+        <section class="container-items-footer">
             <section>
                 <div>
                     <h2 class="title-footer-links-main">Tropical Tech</h2>
@@ -196,31 +212,32 @@
                 </div>
             </section>
             <section>
-                <div>
-                    <div>
-                        <a href="#">
+                <div class="container-links-social">
+                    <div class="box-link-social">
+                        <a href="#" class="link-social">
                             <img src="public/img/iconInstagram.png" alt="instagram">
                         </a>
                     </div>
-                    <div>
-                        <a href="#">
+                    <div class="box-link-social">
+                        <a href="#" class="link-social">
                             <img src="public/img/iconFacebook.png" alt="facebook">
                         </a>
                     </div>
-                    <div>
-                        <a href="#">
+                    <div class="box-link-social">
+                        <a href="#" class="link-social">
                             <img src="public/img/iconLinkedin.png" alt="linkedin">
                         </a>
                     </div>
                 </div>
-                <div>
-                    <span>
+                <div class="copy-content">
+                    <div>
                         Copyright © 2024 - Tropical Tech | All Rights <br> Reserved
-                    </span>
+                    </div>
                 </div>
             </section>
         </section>
     </footer>
 
+    <script src="public/script.js"></script>
 </body>
 </html>
