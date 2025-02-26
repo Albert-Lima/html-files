@@ -1140,3 +1140,13 @@
         height: 30px;
     }
 }
+
+
+/*página de serviços*/
+.container-boxes-pageService{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
