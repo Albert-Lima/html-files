@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --var-headerFontColor: #757575;
+    --var-headerFontColorHover: #f45d48;
+    --var-mainColor: #078080;
+    --var-gradientSectionGreenStyled: #141515;
+    --var-backgroundFooter: #111111;
+    --var-fontSecundary: "Open Sans", serif;
+    --var-fontPrimary: "Montserrat", serif;
+    --var-maxWidthSections: 1440px;
+}
+
+.clear-section-contact{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.main-desc-by-sectionContact{
+    font-family: var(--var-fontSecundary);
+    font-size: 25pt;
+    font-weight: 500;
+    color: var(--var-backgroundFooter);
+}
+.main-text-by-sectionContact{
+    font-family: var(--var-fontSecundary);
+    font-size: 12pt;
+    font-weight: 500;
+    color: var(--var-headerFontColor);
+}
+
+.container-form-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-form-contact form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 20px;
+    max-width: 700px;
+    margin-top: 50px;
+}
+.container-form-contact form input{
+    width: calc(100% - 60px);
+    padding: 30px;
+    border-radius: 40px;
+    border: 1px solid var(--var-headerFontColor);
+    font-family: var(--var-fontSecundary);
+    font-size: 12pt;
+    font-weight: 500;
+    outline-color: var(--var-headerFontColorHover);
+    transition: 0.2s;
+    
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--var-backgroundFooter) !important; /* Define a cor do texto */
+    transition: background-color 5000s ease-in-out 0s !important; /* Remove a mudança de cor automática */
+    background-color: transparent !important; /* Remove o fundo cinza */
+    caret-color: #ffffff !important; /* Mantém a cor do cursor */
+}
+.container-form-contact form textarea{
+    width: calc(100% - 60px);
+    height: 300px;
+    padding: 30px;
+    border-radius: 40px;
+    border: 1px solid var(--var-headerFontColor);
+    font-family: var(--var-fontSecundary);
+    font-size: 12pt;
+    font-weight: 500;
+    outline-color: var(--var-headerFontColorHover);
+    transition: 0.2s;
+    resize: none;
+}
+
+.container-check-form-contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Ocultar checkbox padrão */
+.container-check-form-contact input[type="checkbox"] {
+    display: none;
+}
+
+/* Criar o checkbox estilizado */
+.custom-checkbox {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--var-headerFontColor);
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Marca de seleção */
+.custom-checkbox::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(-45deg);
+    top: 30%;
+    left: 30%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform-origin: center;
+    cursor: pointer;
+}
+
+/* Quando o checkbox está marcado */
+.container-check-form-contact input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: var(--var-headerFontColorHover);
+    border-color: var(--var-headerFontColorHover);
+}
+
+.container-check-form-contact input[type="checkbox"]:checked + .custom-checkbox::after {
+    opacity: 1;
+}
+
+/* Estilo do texto */
+.container-check-form-contact p {
+    margin: 0;
+    font-size: 10pt;
+    font-family: var(--var-fontSecundary);
+    font-weight: 400;
+    color: var(--var-headerFontColor);
+    width: calc(100% - 90px);
+}
+
+/* Estilo do link */
+.container-check-form-contact a {
+    color: #525252;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: var(--var-fontSecundary);
+    font-size: 10pt;
+}
+
+.container-check-form-contact a:hover {
+    text-decoration: underline;
+}
+
+.button-send-contact{
+    background-color: var(--var-mainColor);
+    padding: 15px 25px;
+    font-family: var(--var-fontSecundary);
+    font-weight: 600;
+    font-size: 12pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 40px;
+    align-self: start;
+}
+
+@media (max-width: 740px) {
+    .main-desc-by-sectionContact{
+        font-size: 20pt;
+    }
+    .main-text-by-sectionContact{
+        font-size: 11pt;
+        max-width: 90%;
+    }
+    .container-form-contact form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        gap: 20px;
+        max-width: 700px;
+        margin-top: 50px;
+    }
+    .container-form-contact form input{
+        width: calc(100% - 60px);
+        padding: 20px;
+        border-radius: 40px;
+        border: 1px solid var(--var-headerFontColor);
+        font-family: var(--var-fontSecundary);
+        font-size: 11pt;
+        font-weight: 500;
+        outline-color: var(--var-headerFontColorHover);
+        transition: 0.2s;
+        
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active {
+        -webkit-text-fill-color: var(--var-backgroundFooter) !important; /* Define a cor do texto */
+        transition: background-color 5000s ease-in-out 0s !important; /* Remove a mudança de cor automática */
+        background-color: transparent !important; /* Remove o fundo cinza */
+        caret-color: #ffffff !important; /* Mantém a cor do cursor */
+    }
+    .container-form-contact form textarea{
+        width: calc(100% - 60px);
+        height: 300px;
+        padding: 20px;
+        border-radius: 40px;
+        border: 1px solid var(--var-headerFontColor);
+        font-family: var(--var-fontSecundary);
+        font-size: 11pt;
+        font-weight: 500;
+        outline-color: var(--var-headerFontColorHover);
+        transition: 0.2s;
+        resize: none;
+    }
+    
+    .container-check-form-contact{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    /* Ocultar checkbox padrão */
+    .container-check-form-contact input[type="checkbox"] {
+        display: none;
+    }
+    
+    /* Criar o checkbox estilizado */
+    .custom-checkbox {
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--var-headerFontColor);
+        border-radius: 20px;
+        display: inline-block;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    /* Marca de seleção */
+    .custom-checkbox::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 5px;
+        border-left: 3px solid white;
+        border-bottom: 3px solid white;
+        transform: rotate(-45deg);
+        top: 30%;
+        left: 30%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        transform-origin: center;
+        cursor: pointer;
+    }
+    
+    /* Quando o checkbox está marcado */
+    .container-check-form-contact input[type="checkbox"]:checked + .custom-checkbox {
+        background-color: var(--var-headerFontColorHover);
+        border-color: var(--var-headerFontColorHover);
+    }
+    
+    .container-check-form-contact input[type="checkbox"]:checked + .custom-checkbox::after {
+        opacity: 1;
+    }
+    
+    /* Estilo do texto */
+    .container-check-form-contact p {
+        margin: 0;
+        font-size: 10pt;
+        font-family: var(--var-fontSecundary);
+        font-weight: 400;
+        color: var(--var-headerFontColor);
+        width: calc(100% - 90px);
+    }
+    
+    /* Estilo do link */
+    .container-check-form-contact a {
+        color: #525252;
+        text-decoration: none;
+        font-weight: 500;
+        font-family: var(--var-fontSecundary);
+        font-size: 10pt;
+    }
+    
+    .container-check-form-contact a:hover {
+        text-decoration: underline;
+    }
+    
+    .button-send-contact{
+        background-color: var(--var-mainColor);
+        padding: 15px 25px;
+        font-family: var(--var-fontSecundary);
+        font-weight: 600;
+        font-size: 12pt;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 25px;
+        margin-top: 40px;
+        align-self: start;
+    }
+}
+
+@media (max-width: 400px) {
+    .clear-section-contact{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .main-desc-by-sectionContact{
+        font-size: 15pt;
+    }
+    .main-text-by-sectionContact{
+        font-size: 10pt;
+    }
+    .container-form-contact form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        gap: 20px;
+        max-width: 700px;
+        margin-top: 50px;
+    }
+    .container-form-contact form input{
+        width: calc(100% - 60px);
+        padding: 20px;
+        border-radius: 40px;
+        border: 1px solid var(--var-headerFontColor);
+        font-family: var(--var-fontSecundary);
+        font-size: 10pt;
+        font-weight: 500;
+        outline-color: var(--var-headerFontColorHover);
+        transition: 0.2s;
+        
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active {
+        -webkit-text-fill-color: var(--var-backgroundFooter) !important; /* Define a cor do texto */
+        transition: background-color 5000s ease-in-out 0s !important; /* Remove a mudança de cor automática */
+        background-color: transparent !important; /* Remove o fundo cinza */
+        caret-color: #ffffff !important; /* Mantém a cor do cursor */
+    }
+    .container-form-contact form textarea{
+        width: calc(100% - 60px);
+        height: 300px;
+        padding: 20px;
+        border-radius: 40px;
+        border: 1px solid var(--var-headerFontColor);
+        font-family: var(--var-fontSecundary);
+        font-size: 10pt;
+        font-weight: 500;
+        outline-color: var(--var-headerFontColorHover);
+        transition: 0.2s;
+        resize: none;
+    }
+    
+    .container-check-form-contact{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    /* Ocultar checkbox padrão */
+    .container-check-form-contact input[type="checkbox"] {
+        display: none;
+    }
+    
+    /* Criar o checkbox estilizado */
+    .custom-checkbox {
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--var-headerFontColor);
+        border-radius: 20px;
+        display: inline-block;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    /* Marca de seleção */
+    .custom-checkbox::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 5px;
+        border-left: 3px solid white;
+        border-bottom: 3px solid white;
+        transform: rotate(-45deg);
+        top: 30%;
+        left: 30%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        transform-origin: center;
+        cursor: pointer;
+    }
+    
+    /* Quando o checkbox está marcado */
+    .container-check-form-contact input[type="checkbox"]:checked + .custom-checkbox {
+        background-color: var(--var-headerFontColorHover);
+        border-color: var(--var-headerFontColorHover);
+    }
+    
+    .container-check-form-contact input[type="checkbox"]:checked + .custom-checkbox::after {
+        opacity: 1;
+    }
+    
+    /* Estilo do texto */
+    .container-check-form-contact p {
+        margin: 0;
+        font-size: 10pt;
+        font-family: var(--var-fontSecundary);
+        font-weight: 400;
+        color: var(--var-headerFontColor);
+        width: calc(100% - 70px);
+    }
+    
+    /* Estilo do link */
+    .container-check-form-contact a {
+        color: #525252;
+        text-decoration: none;
+        font-weight: 500;
+        font-family: var(--var-fontSecundary);
+        font-size: 10pt;
+    }
+    
+    .container-check-form-contact a:hover {
+        text-decoration: underline;
+    }
+    
+    .button-send-contact{
+        background-color: var(--var-mainColor);
+        padding: 10px 20px;
+        font-family: var(--var-fontSecundary);
+        font-weight: 600;
+        font-size: 11pt;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 25px;
+        margin-top: 20px;
+        align-self: end;
+    }
+}
