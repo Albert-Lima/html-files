@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/oursourcing.css">
     <title data-lang="title-page">Outsoursing - Tropical Tech</title>
 </head>
 <body>
@@ -38,17 +39,26 @@
         </nav>
 
         <div class="container-select-lang">
-            <button class="btt-lang">
-                <span id="buttonSelectLangPT" class="actived-lang container-flag-lang">
+            <div class="btt-lang">
+                <button id="buttonSelectLangPT" class="actived-lang container-flag-lang">
                     <img src="public/img/52538-flag-of-portugal-clipart 1.png" alt="portugal flag">
-                    PT
+                    <p>PT</p>
+                    
                 </span>
-                <span id="buttonSelectLangUS" class="container-flag-lang">
+                <button id="buttonSelectLangUS" class="container-flag-lang">
                     <img src="public/img/icons8-eua-48.png" alt="united states flag">
-                    US
-                </span>
-            </button>
+                    <p>US</p>
+                </button>
+            </div>
+            <img src="public/img/openLang.png" alt="icon open lang" class="icon-open-lang">
         </div>
+
+
+        <button class="btt-hamburger">
+            <img src="public/img/icons8-cardápio-48.png" alt="closed hamburger" class="closed-hamburger">
+            <img src="public/img/icons8-excluir-64.png" alt="open hamburger" class="open-hamburger"><!--inicialmente display: none;-->
+        </button>
+        <section class="menu-hamburger"></section>
     </header>
 
     <!--estilo universal-->
@@ -66,15 +76,17 @@
 
 
     <!--style universal-->
-    <section class="clear-section">
-        <section class="centralize-section-pageService">
+    <section class="clear-section clear-section-services" style="margin-top: 120px;">
+        
             <section class="container-boxes-pageService">
-                <!--estilizado em Oursoursing.css-->
-                <div id="circlePageService"></div>
+                <!--estilizado em oursourcing.css-->
+                <div id="circlePageService">
+                    <img src="public/img/circleService.png" alt="img">
+                </div>
 
                 <!--estilização universal-->
-                <div>
-                    <h2 class="section-service-page">Outsoursing</h2>
+                <div class="container-text-service">
+                    <h2 class="section-service-page">Outsourcing</h2>
                     <p>
                         Solucionamos e simplificamos todos os projetos de TI para a sua empresa.
                         Partilhamos conhecimento, estabelecemos metas e gerimos amplamente
@@ -84,8 +96,8 @@
             </section>
             <section class="container-boxes-pageService">
                 <!--estilização universal-->
-                <div>
-                    <h2 class="section-service-page">Porque <br> Outsoursing?</h2>
+                <div class="container-text-service">
+                    <h2 class="section-service-page">Porque <br> Outsourcing?</h2>
                     <p>
                         Cobertura nacional com escritórios nos distritos de Lisboa e Porto.
                         Com uma equipe de RH especializada, composta por profissionais em
@@ -101,7 +113,7 @@
             </section>
             <section class="container-boxes-pageServiceColumn">
                 <!--estilização universal-->
-                <div>
+                <div class="container-text-service">
                     <h2 class="section-service-page">Comodidade e <br> Segurança</h2>
                     <p>
                         Somos conectados e antenados a cada um de nossos clientes.
@@ -117,32 +129,32 @@
                     <img src="public/img/solution-nearshore.svg.png" alt="design span">
                 </div>
             </section>
-        </section>
-    </section>
-
-
-    <!--style unic-->
-    <section>
-        <div>
-            <p>
-                Não perca mais
-                tempo, vamos
-                conversar!
-            </p>
-        </div>
-        <div>
-            <a href="">
-                Aceita <br> um chá?
-                <span>
-                    <img src="public/img/Container.png" alt="aceita um chá?">
-                </span>
-            </a>
-        </div>
     </section>
 
     <!--footer universal-->
     <footer class="footer-main-page">
-        <section>
+        <!--style universal-->
+        <section class="section-want-tea">
+            <div>
+                <p>
+                    Não perca mais
+                    tempo, vamos
+                    conversar!
+                </p>
+            </div>
+            <a href="">
+                <p>
+                    Aceita <br> um chá?
+                </p>
+                <div>
+                    <img src="public/img/Container.png" alt="aceita um chá?">
+                </div>
+            </a>
+        </section>
+
+
+
+        <section class="container-items-footer">
             <section>
                 <div>
                     <h2 class="title-footer-links-main">Tropical Tech</h2>
@@ -156,30 +168,31 @@
                 </div>
             </section>
             <section>
-                <div>
-                    <div>
-                        <a href="#">
+                <div class="container-links-social">
+                    <div class="box-link-social">
+                        <a href="#" class="link-social">
                             <img src="public/img/iconInstagram.png" alt="instagram">
                         </a>
                     </div>
-                    <div>
-                        <a href="#">
+                    <div class="box-link-social">
+                        <a href="#" class="link-social">
                             <img src="public/img/iconFacebook.png" alt="facebook">
                         </a>
                     </div>
-                    <div>
-                        <a href="#">
+                    <div class="box-link-social">
+                        <a href="#" class="link-social">
                             <img src="public/img/iconLinkedin.png" alt="linkedin">
                         </a>
                     </div>
                 </div>
-                <div>
-                    <span>
+                <div class="copy-content">
+                    <div>
                         Copyright © 2024 - Tropical Tech | All Rights <br> Reserved
-                    </span>
+                    </div>
                 </div>
             </section>
         </section>
     </footer>
+    <script src="public/script.js"></script>
 </body>
 </html>
