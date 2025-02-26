@@ -12,7 +12,9 @@
     --var-fontPrimary: "Montserrat", serif;
 }
 
-
+body{
+    overflow-x: hidden;
+}
 .section-top-home{
     position: relative;
     height: 100vh;
@@ -23,9 +25,10 @@
     background-image: url("img/image 1.png");
     background-size: cover;
     background-position: left center;
-    animation: borderTop 1s ease-in-out;
-    animation-timeline: view();
-    animation-range: cover 50% cover 150%;
+    animation: borderSection 1s ease-in-out;
+    animation-timeline: scroll();
+    animation-range: cover 0vh cover 100vh;
+    overflow: hidden;
 }
 .overlayer{
     position: absolute;
@@ -34,16 +37,22 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.596);
-    animation: borderTop 1s ease-in-out;
-    animation-timeline: view();
-    animation-range: cover 50% cover 150%;
+    animation: borderSection 1s ease-in-out;
+    animation-timeline: scroll();
+    animation-range: cover 0vh cover 100vh;
 }
 @keyframes borderSection {
     from{
-        border-bottom: 0%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        width: 100%;
+        transform: translateX(0%);
     }
     to{
-        border-bottom: 20%
+        border-bottom-right-radius: 30%;
+        border-bottom-left-radius: 30%;
+        width: 120%;
+        transform: translateX(-10%);
     }
 }
 
@@ -309,9 +318,6 @@
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
-}
-#gridBoxesNumberHome section div:nth-child(2){
-    
 }
 
 

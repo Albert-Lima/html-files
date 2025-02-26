@@ -31,7 +31,9 @@
     gap: 30px;
     border-radius: 40px;
     z-index: 10;
+    
 }
+
 
 .header-main-page a img{
     height: 60px;
@@ -197,6 +199,27 @@
 
 
 /*styles top*/
+.section-top-main{
+    height: 70vh;
+    background-color: var(--var-mainColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: borderSectionTopMain 2s ease-in-out;
+    animation-timeline: scroll();
+    animation-range: cover 0vh cover 100vh;
+}
+@keyframes borderSectionTopMain {
+    from{
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+    }
+    to{
+        border-bottom-right-radius: 30%;
+        border-bottom-left-radius: 30%;
+    }
+}
 .desc-section-home {
     display: flex;
     flex-direction: column;
@@ -212,8 +235,8 @@
 .desc-section-home h1{
     color: white;
     font-family: var(--var-fontPrimary);
-    font-size: 30pt;
-    font-weight: 400;
+    font-size: 35pt;
+    font-weight: 500;
 }
 @keyframes borderSection {
     from{
@@ -226,8 +249,9 @@
 .desc-section-home p{
     color: white;
     font-family: var(--var-fontSecundary);
-    font-size: 12pt;
+    font-size: 15pt;
     font-weight: 300;
+    max-width: 550px;
 }
 
 @media (max-width: 460px){

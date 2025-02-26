@@ -227,3 +227,4 @@ images.forEach((img, index) => {
 
 // Inicializa o slider
 updateSlider();
+
