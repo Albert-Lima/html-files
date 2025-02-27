@@ -12,37 +12,37 @@ iconOpenLang.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const spans = document.querySelectorAll(".container-flag-lang");
 
-    // Função para ativar um span específico
     function activateSpan(event, selectedSpan) {
-        event.stopPropagation(); // Impede que o clique no span afete o restante
+        event.stopPropagation();
 
-        // Remove 'actived-lang' de todos os spans
         spans.forEach(span => span.classList.remove("actived-lang"));
-
-        // Adiciona 'actived-lang' apenas ao span clicado
         selectedSpan.classList.add("actived-lang");
 
-        // Esconde todos os spans
         spans.forEach(span => {
             if (span !== selectedSpan) {
-                span.style.display = "none"; // Oculta os outros spans
+                span.style.display = "none";
             } else {
-                span.style.display = "flex"; // Mantém apenas o selecionado visível
+                span.style.display = "flex";
             }
         });
-        
 
-        // Executa uma função específica para cada span
+        let selectedLang = "pt"; // Padrão
+
         if (selectedSpan.id === "buttonSelectLangPT") {
-            containerFlagLang[1].style.display = "none"
-            console.log("Português selecionado!");
+            containerFlagLang[1].style.display = "none";
+            selectedLang = "pt";
         } else if (selectedSpan.id === "buttonSelectLangUS") {
-            containerFlagLang[0].style.display = "none"
-            console.log("Inglês selecionado!");
+            containerFlagLang[0].style.display = "none";
+            selectedLang = "en";
         }
+
+        // Salva a escolha do idioma no localStorage
+        localStorage.setItem("selectedLanguage", selectedLang);
+
+        // Dispara um evento personalizado para notificar a mudança de idioma
+        document.dispatchEvent(new CustomEvent("languageChanged", { detail: selectedLang }));
     }
 
-    // Adiciona evento de clique individualmente para cada span
     document.getElementById("buttonSelectLangPT").addEventListener("click", function(event) {
         activateSpan(event, this);
     });
@@ -50,6 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("buttonSelectLangUS").addEventListener("click", function(event) {
         activateSpan(event, this);
     });
+
+    // Verifica o idioma salvo e aplica ao carregar a página
+    const savedLang = localStorage.getItem("selectedLanguage") || "pt";
+    const activeSpan = savedLang === "pt" ? document.getElementById("buttonSelectLangPT") : document.getElementById("buttonSelectLangUS");
+    activateSpan(new Event("load"), activeSpan);
 });
 
 
@@ -228,3 +233,22 @@ images.forEach((img, index) => {
 // Inicializa o slider
 updateSlider();
 
+
+
+
+//ANIMAÇÃO TEXTO
+document.addEventListener("DOMContentLoaded", () => {
+    const texts = document.querySelectorAll(".animated-text");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active-animation");
+            } else {
+                entry.target.classList.remove("active-animation"); // Reseta ao sair da tela
+            }
+        });
+    }, { threshold: 0.5 });
+
+    texts.forEach(text => observer.observe(text));
+});

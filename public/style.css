@@ -1149,3 +1149,15 @@
     justify-content: center;
     position: relative;
 }
+
+.animated-text {
+    opacity: 0.3;
+    line-height: 2.5; /* Espaçamento inicial maior */
+    transition: opacity 1s ease-out, line-height 1s ease-out;
+    background: none; /* Remove o background */
+}
+
+.animated-text.active-animation {
+    opacity: 1;
+    line-height: 1.5; /* Espaçamento reduzido após a animação */
+}
