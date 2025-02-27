@@ -1,7 +1,7 @@
 const translations = {
     "pt": {
         //HEADER
-        "title-page": "Tropical Tech - Outsourcing",
+        "title-page": "Tropical Tech - Contato",
         "linkAbout": "Sobre",
         "linkServices": "Serviços",
         "linkCulture": "Cultura",
@@ -40,7 +40,7 @@ const translations = {
     },
     "en": {
         //HEADER
-        "title-page": "Tropical Tech - Outsourcing",
+        "title-page": "Tropical Tech - Contact",
         "linkAbout": "About",
         "linkServices": "Services",
         "linkCulture": "Culture",
