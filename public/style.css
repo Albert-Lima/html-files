@@ -1157,7 +1157,7 @@
     background: none; /* Remove o background */
 }
 
-.animated-text.active-animation {
+.animated-text.active-animated {
     opacity: 1;
     line-height: 1.5; /* Espaçamento reduzido após a animação */
 }

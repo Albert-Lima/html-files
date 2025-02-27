@@ -235,20 +235,3 @@ updateSlider();
 
 
 
-
-//ANIMAÇÃO TEXTO
-document.addEventListener("DOMContentLoaded", () => {
-    const texts = document.querySelectorAll(".animated-text");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active-animation");
-            } else {
-                entry.target.classList.remove("active-animation"); // Reseta ao sair da tela
-            }
-        });
-    }, { threshold: 0.5 });
-
-    texts.forEach(text => observer.observe(text));
-});
