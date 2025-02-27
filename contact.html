@@ -21,7 +21,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/services.html" data-lang="linkCervices">
+                    <a href="/services.html" data-lang="linkServices">
                         Serviços
                     </a>
                 </li>
@@ -84,14 +84,14 @@
 
         <section class="container-form-contact">
             <form action="#">
-                <input type="text" name="name" placeholder="Nome">
-                <input type="email" name="e-mail" id="" placeholder="E-mail">
-                <input type="tel" name="telefone" id="" placeholder="Telefone">
-                <textarea name="msg" id="" placeholder="Escreva uma mensagem"></textarea>
+                <input type="text" name="name" data-lang="nome" placeholder="Nome">
+                <input type="email" name="e-mail" data-lang="email" id="" placeholder="E-mail">
+                <input type="tel" name="telefone" data-lang="telefone" id="" placeholder="Telefone">
+                <textarea name="msg" data-lang="msg" id="" placeholder="Escreva sua mensagem"></textarea>
                 <label class="container-check-form-contact" for="politcCheckbox">
                     <input type="checkbox" id="politcCheckbox">
                     <span class="custom-checkbox"></span>
-                    <p>
+                    <p data-lang="checkbox">
                         Tomei conhecimento que os dados pessoais serão tratados pela Tropical Tech S.A. nos termos da 
                         <a href="#">Política de Privacidade</a>
                         para fins de contato, a pedido do titular dos dados e de que não devem ser enviados dados de categoria especial
@@ -99,7 +99,7 @@
                     </p>
                 </label>
                 
-                <button type="submit" class="button-send-contact">
+                <button type="submit" class="button-send-contact" data-lang="send">
                     Enviar 
                     <img src="public/img/Clip path group.png" alt="enviar mensagem">
                 </button>
@@ -152,5 +152,6 @@
     </footer>
 
     <script src="public/script.js"></script>
+    <script src="public/langContact.js"></script>
 </body>
 </html>
