@@ -192,22 +192,30 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                const slide = document.querySelector(".slide");
+    const slide = document.querySelector(".slide");
+    const cards = document.querySelectorAll(".container-image");
 
-                function handleClick(event) {
-                    // Se clicar no slide, abre ou mantém aberto
-                    if (slide.contains(event.target)) {
-                        slide.classList.add("open");
-                    } 
-                    // Se clicar fora, fecha
-                    else {
-                        slide.classList.remove("open");
-                    }
-                }
+    // Define rotações e deslocamentos iniciais aleatórios
+    cards.forEach(card => {
+        const randomRotation = (Math.random() * 10 - 5) + "deg"; // Rotação entre -5 e 5 graus
+        const randomX = (Math.random() * 10 - 5) + "px"; // Movimento horizontal entre -5px e 5px
+        const randomY = (Math.random() * 10 - 5) + "px"; // Movimento vertical entre -5px e 5px
 
-                // Detecta clique na página
-                document.addEventListener("click", handleClick);
-            });
+        card.style.setProperty("--initial-rotation", randomRotation);
+        card.style.setProperty("--initial-x", randomX);
+        card.style.setProperty("--initial-y", randomY);
+    });
+
+    function handleClick(event) {
+        if (slide.contains(event.target)) {
+            slide.classList.add("open");
+        } else {
+            slide.classList.remove("open");
+        }
+    }
+
+    document.addEventListener("click", handleClick);
+});
         </script>
 
         <a href="/culture" data-lang="linkCulturaHome" style="margin-top: 30px;">
