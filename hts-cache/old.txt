@@ -1,0 +1,5 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+14:26:28	16/16	---M--	502	error ('Bad%20Gateway')	text/plain	date:Tue,%2029%20Aug%202023%2013:26:30%20GMT	http://tropicals-stellar-site-0d5875.webflow.io/robots.txt		(from )
+14:26:28	16/16	---M--	502	error ('Bad%20Gateway')	text/plain	date:Tue,%2029%20Aug%202023%2013:26:30%20GMT	http://tropicals-stellar-site-0d5875.webflow.io/	C:/Users/felip/Downloads/webflow/TTwebflow/tropicals-stellar-site-0d5875.webflow.io/index.html	(from )
+14:26:29	16/16	---M--	502	error ('Bad%20Gateway')	text/plain	date:Tue,%2029%20Aug%202023%2013:26:30%20GMT	http://tropicals-stellar-site-0d5875.webflow.io/	C:/Users/felip/Downloads/webflow/TTwebflow/tropicals-stellar-site-0d5875.webflow.io/index.html	(from )
+14:26:29	16/16	---M--	502	error ('Bad%20Gateway')	text/plain	date:Tue,%2029%20Aug%202023%2013:26:30%20GMT	http://tropicals-stellar-site-0d5875.webflow.io/	C:/Users/felip/Downloads/webflow/TTwebflow/tropicals-stellar-site-0d5875.webflow.io/index.html	(from )
