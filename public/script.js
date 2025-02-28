@@ -176,7 +176,7 @@ observer.observe(clientNumbersElement);
 
 
 
-/*slide home*/
+/*slide home
 const images = document.querySelectorAll('.container-image');
 let currentIndex = 1; // Começa na segunda imagem (meio do primeiro trio)
 
@@ -232,6 +232,6 @@ images.forEach((img, index) => {
 
 // Inicializa o slider
 updateSlider();
-
+*/
 
 

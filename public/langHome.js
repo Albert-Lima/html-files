@@ -21,15 +21,16 @@ const translations = {
         "mainTextServicesHome": "Com uma equipe dedicada e soluções tecnológicas inovadoras, canalizamos nossa energia e criatividade para impulsionar o seu negócio rumo ao sucesso. Estamos preparados para transformar desafios em oportunidades extraordinárias!",
 
         "maisDescNumbersHome": "Nossos Numeros",
+        "wordAubilous":"Colaboradores",
         "word-clientes-home": "Clientes",
         "horas-formacao": "Horas de formação",
 
-        "nameSectionCultureHome": "CULTURA",
+        "nameSectionCulturaHome": "CULTURA",
         "mainDescCultureHome": "Cultura Tropical",
 
         "mainTextCultureHome": "A nossa Cultura está assente em pilares como a proximidade, o bem-estar, o trabalho em equipa, o feedback constante e a aprendizagem contínua.",
 
-        "linkCultureHome:": "Cultura &rarr;",
+        "linkCulturaHome": "Cultura &rarr;",
 
         "nameSectionNovidadesHome": "Novidades",
         "mainDescNovidadeHome": "Fique por dentro do mundo Tech",
@@ -78,15 +79,16 @@ const translations = {
         "mainTextServicesHome": "With a dedicated team and innovative technological solutions, we channel our energy and creativity to drive your business toward success. We are prepared to turn challenges into extraordinary opportunities!",
 
         "maisDescNumbersHome": "Our Numbers",
+        "wordAubilous": "Employees",
         "word-clientes-home": "Clients",
         "horas-formacao": "Training hours",
 
-        "nameSectionCultureHome": "CULTURE",
+        "nameSectionCulturaHome": "CULTURE",
         "mainDescCultureHome": "Tropical Culture",
 
         "mainTextCultureHome": "Our culture is based on pillars such as proximity, well-being, teamwork, constant feedback, and continuous learning.",
 
-        "linkCultureHome": "Culture &rarr;",
+        "linkCulturaHome": "Culture &rarr;",
 
         "nameSectionNovidadesHome": "News",
         "mainDescNovidadeHome": "Stay on top of the Tech world",

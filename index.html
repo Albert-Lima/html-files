@@ -129,7 +129,7 @@
                     <span><img src="public/img/ComponentNumbers.png" alt="icon"></span>
                     <span>
                         <p class="numberSectionStyleHome" id="aubilousNumbers">+364</p>
-                        <p class="descNumberSectionHome">Aubilous</p>
+                        <p class="descNumberSectionHome" data-lang="wordAubilous">Colaboradores</p>
                     </span>
                 </div>
                 <div class="boxNumberHome">
@@ -154,7 +154,7 @@
     <section class="culture-section-home section-green-styled">
         <!--estilo universal-->
         <section class="container-model-two">
-            <h2 class="name-section" data-lang="nameSectionCultureHome">CULTURA</h2>
+            <h2 class="name-section" data-lang="nameSectionCulturaHome">CULTURA</h2>
             <h3 class="main-desc-by-section clearFont" data-lang="mainDescCultureHome" style="color: white;">Cultura Tropical</h3><!--textos que contém clear mudarão para design branco-->
             <p class="main-text-by-section clearFont animated-text" data-lang="mainTextCultureHome" style="color: rgb(215, 215, 215);">
                 A nossa Cultura está assente em pilares como a proximidade, o
@@ -163,42 +163,40 @@
             </p>
         </section>
 
-        <section class="slide">
-            <div class="container-image">
+        <section class="slide" onclick="toggleOpen()">
+            <div class="container-image" style="--angle: -15; --position: -4;">
                 <img src="public/img/slideHome/pexels-bertellifotografia-16118489.png" alt="">
             </div>
-            <div class="container-image">
+            <div class="container-image" style="--angle: -10; --position: -3;">
                 <img src="public/img/slideHome/pexels-fauxels-3184427.png" alt="">
             </div>
-            <div class="container-image">
+            <div class="container-image" style="--angle: -5; --position: -2;">
                 <img src="public/img/slideHome/pexels-felicity-tai-7964481.png" alt="">
             </div>
-            <div class="container-image">
+            <div class="container-image" style="--angle: 0; --position: -1;">
                 <img src="public/img/slideHome/pexels-gerzonpinatamx-9511917.png" alt="">
             </div>
-            <div class="container-image">
+            <div class="container-image" style="--angle: 5; --position: 0;">
                 <img src="public/img/slideHome/pexels-jopwell-2422293.png" alt="">
             </div>
-            <div class="container-image">
+            <div class="container-image" style="--angle: 10; --position: 1;">
                 <img src="public/img/slideHome/pexels-kampus-8171189.png" alt="">
             </div>
-            <div class="container-image">
+            <div class="container-image" style="--angle: 15; --position: 2;">
                 <img src="public/img/slideHome/pexels-mart-production-7550397.png" alt="">
             </div>
-            <div class="container-image">
+            <div class="container-image" style="--angle: 20; --position: 3;">
                 <img src="public/img/slideHome/pexels-mizunokozuki-12898979.png" alt="">
             </div>
         </section>
-        <section class="control-slide">
-            <button id="back-slide">
-                <img src="public/img/icons8-direita-48 (1).png" alt="back-slide">
-            </button>
-            <button id="next-slide">
-                <img src="public/img/icons8-direita-48 (2).png" alt="next-slide">
-            </button>
-        </section>
 
-        <a href="/culture" data-lang="linkCultureHome" style="margin-top: 30px;">
+        <script>
+            function toggleOpen() {
+                document.querySelector('.slide').classList.toggle('open');
+            }
+        </script>
+
+        <a href="/culture" data-lang="linkCulturaHome" style="margin-top: 30px;">
             Cultura &rarr;
         </a>
     </section>
