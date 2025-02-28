@@ -191,9 +191,23 @@
         </section>
 
         <script>
-            function toggleOpen() {
-                document.querySelector('.slide').classList.toggle('open');
-            }
+            document.addEventListener("DOMContentLoaded", function () {
+                const slide = document.querySelector(".slide");
+
+                function handleClick(event) {
+                    // Se clicar no slide, abre ou mantém aberto
+                    if (slide.contains(event.target)) {
+                        slide.classList.add("open");
+                    } 
+                    // Se clicar fora, fecha
+                    else {
+                        slide.classList.remove("open");
+                    }
+                }
+
+                // Detecta clique na página
+                document.addEventListener("click", handleClick);
+            });
         </script>
 
         <a href="/culture" data-lang="linkCulturaHome" style="margin-top: 30px;">
